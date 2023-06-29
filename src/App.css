@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+html, body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: black;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+    height: 100vh;
+    width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 300% !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav{
+    min-height: 5vh;
+    z-index: 10;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+    position: fixed !important;
+    width: 100%;
+    background: black;
+    height: fit-content;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.nav-link, .navbar-brand {
+    color: white !important;
+}
+
+.nav-link:hover, .navbar-brand:hover, .fa-brands:hover {
+    color: rgb(218, 200, 5) !important;
+}
+
+.text-decoration-none{
+    color: white;
+}
+
+.hero-container {
+    position: relative;
+    padding-top: 5vh;
+    height: 100vh;
+    overflow: hidden;
+    mask-image: linear-gradient(to top, transparent 0%, black 5%);
+}
+
+.banner {
+    height: 95vh;
+}
+
+.hero-image {
+    object-fit: cover;
+    width: 50%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+    top: 5vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+}
+
+.hero-box {
+    text-align: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    right: 0;
+    height: fit-content;
+    margin: auto;
+}
+
+.hero-title {
+    font-size: 3vw;
+    color: black;
+    background: rgba(0, 0, 0, 0);
+}
+
+.hero-btn {
+    color: rgb(0, 0, 0);
+    width: fit-content;
+    background: rgb(81,81,82);
+    color: white;
+}
+
+.show-logo{
+    width: 100%;
+}
+
+.banner-div{
+    height: fit-content;
+}
+
+.banner-img{
+    width: 100vw;
+}
+
+.smid-main{
+    background: linear-gradient(to top, white 0%, black 5%);
+    height: 100vh;
+    padding-top: 5vh;
+}
+
+.smid-banner{
+    mask-image: linear-gradient(to top, transparent 0%, black 15%);
+}
+
+.about{
+    background: linear-gradient(to top, black 0%, white 5%);
+    height: 100vh;
+    padding-top: 5vh;
+}
+
+.about-headshot{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.fa-brands{
+    font-size:200% !important;
+    margin-top: 10px;
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.show-content{
+    color: white;
+    padding-top: 5vh;
+}
+
+.show-logo{
+    border-radius: 50%;
+}
+
+.shows{
+    min-height: 100vh;
+    padding-top: 5vh;
+    color: white;
+    background: linear-gradient(to top, white 0%, black 5%);
+}
+
+.show-btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.ps-main, .mmam-main, .differentlens-main{
+    min-height: 100vh;
+    padding-top: 5vh;
+}
+
+.carousel {
+    height: fit-content;
+}
+
+.ps-main{
+    background: #161440;
+}
+
+.mmam-main{
+    background: rgb(249,65,167);
+}
+
+.mmam-banner, .differentlens-banner{
+    width: 100vw;
+    mask-image: linear-gradient(to top, transparent 0%, black 5%);
+}
+
+.differentlens-main{
+    background: rgb(247,166,99);
+}
+
+.show-cover{
+    width: 70%;
+}
+
+
+
+.footer {
+    background: inherit;
+    min-height: 50px;
 }
