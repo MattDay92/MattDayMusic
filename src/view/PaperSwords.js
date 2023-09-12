@@ -9,7 +9,7 @@ export default function PaperSwords() {
   return (
     <>
       <nav className="navbar navbar-expand-sm navbar-dark p-0" >
-        <div className="container-fluid navbar">
+        <div className="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -24,8 +24,8 @@ export default function PaperSwords() {
         <div className='banner-div'>
           <img className='banner-img' src={PSBanner} />
         </div>
-        <div className='row show-content col-10 m-auto'>
-          <div className='col-6 text-center'>
+        <div className='row show-content'>
+          <div className='show-info'>
             <h5><em>Paper Swords</em>, with music and lyrics by Matt Day and a book by Kelsey Nighthawk, premiered at the 2018 IndyFringe Festival
               and was an award winner the 2020 Chicago Musical Theater Festival.</h5>
             <p><em>Paper Swords</em> is a romantic comedy musical, focusing on two groups of live action role-players (LARPers)
@@ -33,8 +33,8 @@ export default function PaperSwords() {
               are thrown into shambles. To determine the next ruler of the land, the knights of competing teams Ferndrey
               and Silvermore must battle one another for the throne. </p>
           </div>
-          <div className='col-5 m-auto'>
-            <div className='carousel d-flex justify-content-center'>
+          <div className='show-carousel'>
+            <div className='carousel m-auto d-flex justify-content-center'>
               <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div className="carousel-inner">
                   <div className="carousel-item active">
@@ -58,8 +58,9 @@ export default function PaperSwords() {
               </div>
             </div>
           </div>
-          <div className='row col-6 m-auto py-5'>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6P6nx044l-8" title="We Are Knights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div className='show-videos py-5'>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6P6nx044l-8" title="We Are Knights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jXjsDB1S3kw?si=WtE6cFRECLynIeLo" title="Believe in Me" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </div>

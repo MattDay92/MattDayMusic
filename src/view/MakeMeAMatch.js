@@ -9,7 +9,7 @@ export default function MakeMeAMatch() {
   return (
     <>
       <nav className="navbar navbar-expand-sm navbar-dark p-0" >
-        <div className="container-fluid navbar">
+        <div className="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -24,16 +24,16 @@ export default function MakeMeAMatch() {
         <div className='banner-div'>
           <img className='mmam-banner' src={MMAMBanner} />
         </div>
-        <div className='row show-content col-10 m-auto'>
-          <div className='col-6 text-center'>
+        <div className='row show-content'>
+          <div className='show-info'>
             <h5><em>Make Me a Match</em>, with music and lyrics by Matt Day and a book by Jordan Brown and Josh Brown, was the Audience
               Choice Award Winner at the 2019 IndyFringe Festival</h5>
             <p>On the set of America’s favorite dating show, Make Me a Match, young intern Meredith is content with
               her job until she discovers the true character of the beloved host, Danny Sharp. Teaming up with her
               coworker, Lexi, they work together to bring him down once and for all. </p>
           </div>
-          <div className='col-5 m-auto'>
-            <div className='carousel d-flex justify-content-center'>
+          <div className='show-carousel'>
+            <div className='carousel m-auto d-flex justify-content-center'>
               <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div className="carousel-inner">
                   <div className="carousel-item active">
@@ -57,10 +57,12 @@ export default function MakeMeAMatch() {
               </div>
             </div>
           </div>
-          <div className='row col-5 m-auto py-5'>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/hc_kjLdw0e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
         </div>
+        <div className='show-videos py-5'>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hc_kjLdw0e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7AjRzQ_GHQE?si=KBhl03sPZ66gyS0i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+          </div>
       </div>
     </>
   )

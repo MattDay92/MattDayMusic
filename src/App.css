@@ -17,8 +17,13 @@ h1{
     font-size: 300% !important;
 }
 
+@media (max-width: 768px) {
+    h1{
+        font-size: 200% !important;
+    }
+}
+
 nav{
-    min-height: 5vh;
     z-index: 10;
 }
 
@@ -29,12 +34,19 @@ nav{
     height: fit-content;
     padding-top: 2px !important;
     padding-bottom: 2px !important;
-
 }
 
 .nav-item {
     margin-left: 5vw;
     margin-right: 5vw;
+}
+
+.navbar-nav{
+    background: black !important;
+}
+
+.fa-bars{
+    color: white;
 }
 
 .nav-link, .navbar-brand {
@@ -59,6 +71,7 @@ nav{
 
 .banner {
     height: 95vh;
+    object-fit: cover;
 }
 
 .hero-image {
@@ -71,6 +84,7 @@ nav{
     left: 0;
     right: 0;
     opacity: 0.8;
+    mask-image: linear-gradient(to top, transparent 0%, black 5%)
 }
 
 .hero-box {
@@ -86,20 +100,40 @@ nav{
 }
 
 .hero-title {
-    font-size: 3vw;
     color: black;
     background: rgba(0, 0, 0, 0);
 }
 
-.hero-btn {
-    color: rgb(0, 0, 0);
-    width: fit-content;
-    background: rgb(81,81,82);
-    color: white;
+@media (max-width: 1024px) {
+    .hero-image{
+        top: 150px;
+    }
 }
+
+@media (max-width: 768px) {
+    .hero-image{
+        top: 100px;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-image{
+        display: none;
+    }
+
+    .hero-box{
+        left: 0;
+    }
+}
+
 
 .show-logo{
     width: 100%;
+}
+
+.show-content{
+    width: 80vw;
+    margin: auto;
 }
 
 .banner-div{
@@ -110,14 +144,19 @@ nav{
     width: 100vw;
 }
 
-.smid-main{
+.smid-main-home{
     background: linear-gradient(to top, white 0%, black 5%);
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 5vh;
 }
 
 .smid-banner{
     mask-image: linear-gradient(to top, transparent 0%, black 15%);
+}
+
+.featured-content, .featured-content-2{
+    width: 40vw;
+    text-align: center;
 }
 
 .about{
@@ -126,9 +165,18 @@ nav{
     padding-top: 5vh;
 }
 
+.about-headshot-div{
+    width: 25vw;
+}
+
 .about-headshot{
     width: 100%;
     border-radius: 50%;
+}
+
+.about-content{
+    width: 40vw;
+    text-align: center;
 }
 
 .fa-brands{
@@ -149,9 +197,20 @@ nav{
 
 .shows{
     min-height: 100vh;
-    padding-top: 5vh;
+    padding-top: 15vh;
     color: white;
     background: linear-gradient(to top, white 0%, black 5%);
+}
+
+.show-btns{
+    display: flex;
+    justify-content: space-between;
+    width: 85vw;
+    margin: auto;
+}
+
+.show-btn{
+    width: 18vw;
 }
 
 .show-btn:hover{
@@ -165,7 +224,13 @@ nav{
 }
 
 .carousel {
-    height: fit-content;
+    height: 40vh;
+    width: 30vw;
+}
+
+.carousel-img{
+    height: 40vh;
+    object-fit: contain;
 }
 
 .ps-main{
@@ -174,6 +239,12 @@ nav{
 
 .mmam-main{
     background: rgb(249,65,167);
+}
+
+.smid-main{
+    background: black;
+    min-height: 100vh;
+    padding-top: 5vh;
 }
 
 .mmam-banner, .differentlens-banner{
@@ -185,11 +256,35 @@ nav{
     background: rgb(247,166,99);
 }
 
+.show-content{
+    width: 85vw;
+    margin: auto;
+}
+
 .show-cover{
     width: 70%;
 }
 
+.show-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+    text-align: center;
+}
 
+.show-carousel{
+    width: 40vw;
+    margin: auto;
+}
+
+.show-videos{
+    display: flex;
+    justify-content: space-between;
+    width: 85vw;
+    margin: auto;
+    margin-top: 5vh;
+}
 
 .footer {
     background: inherit;

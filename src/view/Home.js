@@ -19,17 +19,17 @@ export default function Home() {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark p-0" >
-                <div className="container-fluid navbar">
+            <nav className="navbar navbar-expand-md p-0" >
+                <div className="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <i className="fas fa-bars"></i>
                     </button>
-                    <div class="collapse navbar-collapse row text-center" id="navbarNav">
+                    <div class="collapse navbar-collapse row text-center" id="navbarNavDropdown">
                         <div class="navbar-nav">
                             <LinkScroll to="hero" spy={true} smooth={true} duration={500} className="nav-link col-3" >Matt Day</LinkScroll >
                             <LinkScroll to="featured" spy={true} smooth={true} duration={500} className="nav-link col-3" >Super Mario is Dead</LinkScroll >
                             <LinkScroll to="about" spy={true} smooth={true} duration={500} className="nav-link col-3" >About</LinkScroll >
-                            <LinkScroll to="shows" spy={true} smooth={true} duration={500} className="nav-link col-3" >Projects</LinkScroll >
+                            <LinkScroll to="shows" spy={true} smooth={true} duration={500} className="nav-link col-3" >Works</LinkScroll >
                         </div>
                     </div>
                 </div>
@@ -45,12 +45,12 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div id='featured' className='smid-main'>
+                <div id='featured' className='smid-main-home'>
                     <div className='banner-div'>
                         <img className='banner-img' src={SMIDBanner} />
                     </div>
-                    <div className='row show-content col-10 m-auto'>
-                        <div className='col-6 text-center'>
+                    <div className='row show-content'>
+                        <div className='featured-content'>
                             <h5>Premiering at the 2023 IndyFringe Festival, <em>Super Mario is Dead</em> is the newest fringe comedy-musical
                                 from writing team Jordan Brown, Josh Brown, and Matt Day.  </h5>
                             <p>Mario always had the spotlight in the Mushroom Kingdom.  But when he dies, his brother Luigi must see
@@ -59,9 +59,10 @@ export default function Home() {
                                 but this darkly comedic story puts them in places you've never seen them in before.
                                 And did we mention that they sing?</p>
                         </div>
-                        <div className='col-6 text-center my-auto'>
-                            <h3>Tickets available soon!</h3>
-                            <button className='btn btn-success' disabled>Tickets</button>
+                        <div className='featured-content-2 my-auto'>
+                            <h3>"The quintessential fringe production"</h3>
+                            <h4>- Lisa Gauthier Mitchison, NUVO</h4>
+                            <h2 className='mt-5'>Original Cast Recording Coming Soon!</h2>
                         </div>
                     </div>
                 </div>
@@ -69,18 +70,18 @@ export default function Home() {
                     <div className='text-center my-5'>
                         <h1>About Matt</h1>
                     </div>
-                    <div className='col-12 d-flex justify-content-around align-items-center my-5' >
-                        <div className='col-3'><img className='about-headshot' src={ParkingLot} /></div>
-                        <div className='col-5 text-center'>
+                    <div className='d-flex justify-content-around align-items-center my-5' >
+                        <div className='about-headshot-div'><img className='about-headshot' src={ParkingLot} /></div>
+                        <div className='about-content'>
                             <div>
                                 Matt Day is a musical theatre composer/lyricist and professional guitarist currently based out of Indianapolis, IN.
-                                After graduating from Indiana University with a degree in mathematics education, he began work on composing his first musical,
-                                Paper Swords. Paper Swords was performed at the 2018 IndyFringe Festival and was an award winner at the 2020 Chicago
-                                Musical Theatre Festival.  Matt’s other work includes Make Me A Match, which won the 2019 IndyFringe Audience Choice Award Winner,
-                                Boy Meets Musical, and a few other projects still in early development.  His work has also been accepted to various cabarets
-                                including the Allen and Grey New Voices Concert, the Latest Draft Podcast, and the Under the Arch Incubator in St. Louis.
-                                Matt recently released his first album, Different Lens, containing songs from Paper Swords and Make Me A Match and featuring
-                                performances by some of his closest friends.
+                                After graduating from Indiana University, he began work on composing his first musical,
+                                <em> Paper Swords</em>, which was an award winner at the 2020 Chicago Musical Theatre Festival.  Matt’s other work includes <em>Make Me A Match</em>,
+                                which won the 2019 IndyFringe Audience Choice Award, <em>Super Mario is Dead</em>, premiering at the 2023 IndyFringe Festival, and a few
+                                other projects still in early development.  His work has also been accepted to various cabarets
+                                including the Allen and Grey New Voices Concert, the Latest Draft Podcast, and the Under the Arch Incubator in St. Louis, MO.
+                                Matt's first album, Different Lens, containing songs from <em>Paper Swords</em> and <em>Make Me A Match</em> is available on Spotify, Apple Music, Napster
+                                and anywhere else you want to look.
                             </div>
                             <div className='d-flex justify-content-around'>
                                 <a href='https://www.instagram.com/mattday92' target='_blank'><i className="fa-brands fa-instagram"></i></a>
@@ -93,15 +94,27 @@ export default function Home() {
                     </div>
                 </div>
                 <div id='shows' className='shows'>
-                <div className='text-center my-5'>
+                    <div className='text-center my-5'>
                         <h1>Works</h1>
                     </div>
-                    <div className='col-10 d-flex justify-content-between m-auto my-5'>
-                        <Link to={'/paperswords'} className='show-btn col-3'><img className='show-logo' src={PaperSwordsLogo} /></Link>
-                        <Link to={'/makemeamatch'} className='show-btn col-3'><img className='show-logo' src={MMAMLogo} /></Link>
-                        <Link to={'/differentlens'} className='show-btn col-3'><img className='show-logo' src={DifferentLensLogo} /></Link>
+                    <div className='show-btns'>
+                        <Link to={'/paperswords'} className='show-btn'><img className='show-logo' src={PaperSwordsLogo} /></Link>
+                        <Link to={'/makemeamatch'} className='show-btn'><img className='show-logo' src={MMAMLogo} /></Link>
+                        <Link to={'/differentlens'} className='show-btn'><img className='show-logo' src={DifferentLensLogo} /></Link>
+                        <Link to={'/supermarioisdead'} className='show-btn'><img className='show-logo' src={SMIDLogo} /></Link>
+
                     </div>
                 </div>
+                {/* <div id='media' className='media'>
+                    <div className='text-center my-5'>
+                        <h1>Media</h1>
+                    </div>
+                    <div className='col-10 d-flex justify-content-between m-auto my-5'>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7AjRzQ_GHQE?si=KBhl03sPZ66gyS0i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jXjsDB1S3kw?si=WtE6cFRECLynIeLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7lkyQppboeg?si=pQI2Uqvexksx4RIz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div> */}
 
             </div>
         </>
